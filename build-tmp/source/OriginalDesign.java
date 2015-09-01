@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class OriginalDesign extends PApplet {
 
-int diameter= 10;
+int diameter = 10;
 public void setup()
 {
 size(500,500);
@@ -48,8 +48,8 @@ ellipse(250,250,diameter,diameter);
 frameRate(10);
 if (diameter<250)
 {
-diameter=diameter+20;
-if (diameter>=250)
+diameter=diameter+5;
+if (diameter==250)
 	{
 		diameter=10;
 	}
@@ -59,14 +59,14 @@ if (diameter>=250)
 
 public void DrawEllipse()
 {
-diameter=450;
+int d=450;
 fill(random(0,255),random(0,255),random(0,255));
 stroke(random(0,255),random(0,255),random(0,255));
-ellipse(250,250,diameter,diameter);
+ellipse(250,250,d,d);
 frameRate(10);
-while (diameter>=150)
+while (d>=150)
 {
-diameter=diameter-20;
+d=d-5;
 }
 }
   static public void main(String[] passedArgs) {
